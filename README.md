@@ -2,13 +2,7 @@
 
 Bienvenue sur EdHubConnect, une plateforme éducative innovante pour la gestion de projets pédagogiques et la visualisation de parcours d'apprentissage.
 
-![Capture d'écran](screenshots/Screenshot 2023-12-21 at 20-37-35 Votre Application Flask.png)
-
-
-![Capture d'écran](screenshots/Screenshot 2023-12-21 at 20-35-16 Liste des Projets.png)
-
-
-![test image](https://www.gnu.org/graphics/license-logos-by-christian-candena-cc-by.png)
+![Capture d'écran](screenshots/FlaskAPP.png)
 
 
 
@@ -49,39 +43,57 @@ pip install -r requirements.txt
    On peut utiliser l'application en se rendant sur cette adresse dans son navigateur préféré.
 
 2. **Création de la liste des thématiques** Avant toute chose, on renseignera la liste des thématiques qu'il sera possible par la suite d'associer à des cours. Pour ce faire il suffit de se rendre sur l'adresse suivante : [http://127.0.0.1:5001/admin/](http://127.0.0.1:5001/admin/)
-   
-2. **Création de la base de donnée projet.db** 
+
+
+![exemple d'un projet](screenshots/exempleProjet.png)   
+3. **Création de la base de donnée projet.db** 
 
  - Créer les projets
-
+ 
 On commencera par faire la liste des projets qu'il faudra réaliser lors de son parcours pédagogique. 
 Lorsqu'on créé un projet, il faut renseigner
-    -- *numéro du projet* : un nombre entier, 1, 2, .. 12, etc
-    -- *intitulé du projet* : le nom du projet, chaîne de caractère
-    -- *durée du projet* : un nombre d'heures, 10, 30, ... 80, etc
-    -- *thématiques* : on viendra cocher parmi les thématiques disponibles dans la liste renseignées précédemment, celles qui sont abordées dans le cours
+
+*numéro du projet* : un nombre entier, 1, 2, .. 12, etc
+
+*intitulé du projet* : le nom du projet, chaîne de caractère
+
+*durée du projet* : un nombre d'heures, 10, 30, ... 80, etc
+
+*thématiques* : on viendra cocher parmi les thématiques disponibles dans la liste renseignées précédemment, celles qui sont abordées dans le cours
+
+![création d'un projet](screenshots/AjouterProjet.png)  
 
  - Associer des cours aux projets
 
 Une fois qu'un projet est créé, on va renseigner la liste des cours conseillée par l'équipe pédagogique afin de pouvoir réaliser les projets correctement. 
-Lorsqu'on renseigne un cours, on donne : 
-    -- *nom du cours* : l'intitulé du cours
-    -- *lien du cours* : un lien https://www...
-    -- *durée du cours* : un nombre, en heures
-    -- *difficulté du cours* : à choisir parmi trois options, facile, moyen et difficile
+Lorsqu'on renseigne un cours, on donne :
 
+*nom du cours* : l'intitulé du cours
+
+*lien du cours* : un lien https://www...
+
+*durée du cours* : un nombre, en heures
+
+*difficulté du cours* : à choisir parmi trois options, facile, moyen et difficile
+
+![création d'un projet](screenshots/AjouterCours.png)  
  - Associer des ressources aux projets
 
 Chaque ressource possède deux caractéristiques : 
-    --*lien vers la ressource* : 
-    --*commentaire* : 
+
+*lien vers la ressource*
+
+*commentaire*
     
+![création d'un projet](screenshots/AjoutRessources.png)   
+
 Les informations renseignées dans cette interface seront ajoutées et structurées directement dans le fichier `projet.db`
 
 Une fois cette étape réalisée, on pensera à interrompre l'exécution de l'application dans le terminal par la combinaison de touches suivantes : `Ctrl` + `C`
 
+![création d'un projet](screenshots/VueGlobale.png) 
 
-3.  **Exécution de l'application edhubconnectview**
+4.  **Exécution de l'application edhubconnectview**
 
  - Préalable
 
@@ -103,7 +115,10 @@ Un système carte contenant au recto le numéro du projet et son intitulé, réa
 
 Cet outil de visualisation est extrêmement basique, il n'y a pas de modularité possible quant à l'affichage des informations. 
 J'aimerai faire évoluer cette fonctionnalité pour permettre à l'utilisateur d'obtenir des informations visuellement plus pertinentes, et personnalisées selon ses souhaits. 
- 
+
+![création d'un projet](screenshots/FlaskAPP.png) 
+
+
 ## Structure du Projet
 
 ```
@@ -156,3 +171,5 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+
+![Logo licence gpl v3]([https://www.gnu.org/graphics/license-logos-by-christian-candena-cc-by.png](https://www.gnu.org/graphics/gplv3-with-text-136x68.png))
