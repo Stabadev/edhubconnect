@@ -2,7 +2,7 @@
 
 Bienvenue sur EdHubConnect, une plateforme éducative innovante pour la gestion de projets pédagogiques et la visualisation de parcours d'apprentissage.
 
-![Capture d'écran](screenshots/Screenshot 2023-12-21 at 20-37-35 Votre Application Flask.png)
+[Capture d'écran](screenshots/Screenshot 2023-12-21 at 20-37-35 Votre Application Flask.png)
 
 
 ## Aperçu
