@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter Cours</title>
+</head>
+<body>
+    <h1>Ajouter Cours - {{ projet.nom_projet }}</h1>
+    <form method="POST" action="{{ url_for('ajouter_cours', projet_id=projet.id) }}">
+        <label for="nom_cours">Nom du Cours:</label>
+        <input type="text" name="nom_cours" required>
+        <br>
+        <label for="lien_cours">Lien du Cours:</label>
+        <input type="text" name="lien_cours" required>
+        <br>
+        <label for="duree_cours">Durée du Cours (en heures):</label>
+        <input type="number" name="duree_cours" required>
+        <br>
+        <label for="difficulte_cours">Difficulté du Cours:</label>
+        <select name="difficulte_cours">
+            <option value="facile">Facile</option>
+            <option value="moyen">Moyen</option>
+            <option value="difficile">Difficile</option>
+        </select>
+        <br>
+        <button type="submit">Ajouter Cours</button>
+    </form>
+</body>
+</html>

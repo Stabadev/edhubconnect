@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Projets</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Liste des Projets</h1>
+    
+    <a href="{{ url_for('ajouter_projet') }}">
+        <button type="button">Ajouter un Projet</button>
+    </a>
+    
+    <ul>
+        {% for projet in projets %}
+            <li>
+                <strong>Nom du Projet:</strong> {{ projet.nom_projet }}<br>
+
+
+
+
+                <strong>Numéro du Projet:</strong> {{ projet.numero_projet }}<br>
+                
+                <strong>Thématiques:</strong>
+                {% for thematique in projet.thematiques %}
+                    {{ thematique.nom_thematique }}
+                {% endfor %}
+                <br>
+                <strong>Durée Totale:</strong> {{ projet.duree_totale }} heures<br> <!-- Ajout de la durée totale -->
+
+                <strong>Cours:</strong>
+                {% for cours in projet.cours %}
+                    {{ cours.nom_cours }} ({{ cours.duree_cours }} heures, Difficulté: {{ cours.difficulte_cours }})
+                    <form method="post" action="{{ url_for('supprimer_cours', cours_id=cours.id) }}" style="display: inline;">
+                        <button type="submit">Supprimer</button>
+                    </form><br>
+
+                {% endfor %}
+
+                <a href="{{ url_for('ajouter_cours', projet_id=projet.id) }}">Ajouter Cours</a>
+                <br>
+                
+                <strong>Ressources:</strong>
+                {% for ressource in projet.ressources %}
+                    {{ ressource.lien_ressource }} ({{ ressource.commentaire_ressource }})
+                    <form method="post" action="{{ url_for('supprimer_ressource', ressource_id=ressource.id) }}" style="display: inline;">
+                        <button type="submit">Supprimer</button>
+                    </form><br>
+                {% endfor %}
+                <br>
+                <a href="{{ url_for('ajouter_ressource', projet_id=projet.id) }}">Ajouter Ressources</a>
+                <br>
+                
+                
+                <form method="post" action="{{ url_for('supprimer_projet', projet_id=projet.id) }}" style="display: inline;">
+                    <button type="submit" style="background-color: #dc3545; color: #fff;">Supprimer ce projet</button>
+                </form>
+
+                
+            </li>
+        {% endfor %}
+    </ul>
+    
+ 
+    
+</body>
+</html>

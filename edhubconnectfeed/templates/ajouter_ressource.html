@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter Ressource - {{ projet.nom_projet }}</title>
+</head>
+<body>
+    <h1>Ajouter Ressource - {{ projet.nom_projet }}</h1>
+    <form method="POST" action="{{ url_for('ajouter_ressource', projet_id=projet.id) }}">
+        <label for="lien_ressource">Lien de la Ressource:</label>
+        <input type="text" name="lien_ressource" required>
+        <br>
+        <label for="commentaire_ressource">Commentaire de la Ressource:</label>
+        <textarea name="commentaire_ressource"></textarea>
+        <br>
+        <button type="submit">Ajouter Ressource</button>
+    </form>
+</body>
+</html>

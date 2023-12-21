@@ -1,0 +1,102 @@
+/* Reset de certaines propriétés CSS par défaut pour plus de cohérence entre les navigateurs */
+body, h1, ul, li, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Style de la zone de contenu principale */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style des éléments de liste */
+ul {
+    list-style: none;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Style des boutons */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style des liens */
+a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Ajoutez ce style dans votre fichier CSS */
+
+/* Style pour la liste des projets */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style pour chaque projet */
+li {
+    border: 1px solid #ddd; /* Bordure autour de chaque projet */
+    margin: 10px; /* Marge autour de chaque projet */
+    padding: 10px; /* Espacement interne */
+    width: 300px; /* Largeur de chaque projet */
+    display: inline-block; /* Affichage en ligne pour afficher les projets côte à côte */
+}
+
+/* Style pour le lien "Ajouter un Projet" */
+a.button {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style pour le bouton "Supprimer un Projet" */
+button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Style pour le titre "Liste des Projets" */
+h1 {
+    text-align: center;
+}
