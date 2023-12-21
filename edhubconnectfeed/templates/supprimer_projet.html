@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supprimer Projet</title>
+</head>
+<body>
+    <h1>Confirmation de Suppression</h1>
+
+    <p>Êtes-vous sûr de vouloir supprimer ce projet ?</p>
+
+    <form method="post" action="{{ url_for('supprimer_projet') }}">
+        <input type="hidden" name="projet_id" value="{{ projet.id }}">
+        <button type="submit">Confirmer la Suppression</button>
+        <a href="{{ url_for('index') }}">Annuler</a>
+    </form>
+</body>
+</html>

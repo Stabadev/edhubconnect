@@ -1,0 +1,63 @@
+<!-- index.html -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Votre Application Flask</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.project-card').on('click', function() {
+        var numeroProjet = $(this).find('.numero-projet').text();
+        var dureeTotale = $(this).find('.duree-totale').text();
+        var nomProjet = $(this).find('.nom-projet').text();
+        var coursDetails = $(this).find('.cours-details').html();
+
+        $('#card-details').html(`
+          <h2>Informations sur le projet sélectionné</h2>
+          <p>${numeroProjet}</p>
+          <p>Durée totale : ${dureeTotale}</p>
+          <p>Nom du projet : ${nomProjet}</p>
+          <h2>Noms des cours associés :</h2>
+          ${coursDetails}
+        `);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Outil de visualisation de projets</h1>
+  <h2> Parcours Data Scientist </h2>
+  <div id="project-container">
+    {% for row in df_projet.itertuples() %}
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-side front">
+            <p class="numero-projet">Projet N°{{ row.numero_projet }}</p>
+            <p class="duree-totale">{{ row.duree_totale }}h</p>
+          </div>
+          <div class="card-side back">
+            <p class="nom-projet">{{ row.nom_projet }}</p>
+            <h2>Noms des cours :</h2>
+            <div class="cours-details">
+              {% for cours_row in df_cours[df_cours['projet_id'] == row.id].itertuples() %}
+                <div class="{{ cours_row.difficulte_cours|lower }} cours-item">
+                  <p>{{ cours_row.nom_cours }} (Durée: {{ cours_row.duree_cours }}h, Difficulté: {{ cours_row.difficulte_cours }})</p>
+                </div>
+              {% endfor %}
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Div pour afficher les détails de la carte cliquée -->
+  <div id="card-details"></div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+#project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-card {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  perspective: 1000px;
+  position: relative;
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+.project-card:hover {
+  background-color: #f0f0f0;
+}
+
+.project-card .card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.project-card .front,
+.project-card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card .back {
+  transform: rotateY(180deg);
+}
+
+.project-card .front p,
+.project-card .back p {
+  margin: 5px 0;
+  color: #333;
+}
+
+#card-details {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: #333;
+}
+
+#card-details h2,
+#card-details p {
+  margin: 10px 0;
+}
+.cours-details {
+  margin-top: 10px;
+}
+
+.cours-details p {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.facile {
+  background-color: #8eff8e; /* Vert pour facile */
+  color: #333;
+}
+
+.moyen {
+  background-color: #ffc966; /* Orange pour moyen */
+  color: #333;
+}
+
+.difficile {
+  background-color: #ff6666; /* Rouge pour difficile */
+  color: #fff;
+}

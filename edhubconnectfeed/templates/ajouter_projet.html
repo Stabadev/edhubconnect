@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter Projet</title>
+</head>
+<body>
+    <h1>Ajouter Projet</h1>
+    <form method="POST" action="{{ url_for('ajouter_projet') }}">
+        <label for="nom_projet">Nom du Projet:</label>
+        <input type="text" name="nom_projet" required>
+        <br>
+        <label for="numero_projet">Numéro du Projet:</label>
+        <input type="text" name="numero_projet" required>
+        <br>
+        <label for="duree_totale">Durée Totale du Projet:</label>
+        <input type="number" name="duree_totale" required>    
+
+        <label>Thématiques :</label>
+        <br>
+        {% for thematique in thematiques %}
+            <input type="checkbox" name="thematiques" value="{{ thematique.nom_thematique }}">
+            {{ thematique.nom_thematique }}
+            <br>
+        {% endfor %}
+        <br>
+
+
+
+
+        <br>
+
+
+        <button type="submit">Ajouter Projet</button>
+    </form>
+</body>
+</html>
