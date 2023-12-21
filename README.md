@@ -20,7 +20,7 @@ Pour démarrer avec EdHubConnect, suivez ces étapes :
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/votre-utilisateur/edhubconnect.git
+git clone https://github.com/Stabadev/edhubconnect.git
 
 # Installer les dépendances
 cd edhubconnect
