@@ -172,4 +172,4 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-![Logo licence gpl v3]([https://www.gnu.org/graphics/license-logos-by-christian-candena-cc-by.png](https://www.gnu.org/graphics/gplv3-with-text-136x68.png))
+![Logo licence gpl v3](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)
